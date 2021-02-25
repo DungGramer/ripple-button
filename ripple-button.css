@@ -1,0 +1,51 @@
+button[ripple] {
+	position: relative;
+	overflow: hidden;
+
+	font-family: inherit;
+
+	user-select: none;
+	white-space: nowrap;
+
+	transition: background 400ms;
+	-webkit-transition: background 400ms;
+	-moz-transition: background 400ms;
+	-ms-transition: background 400ms;
+	-o-transition: background 400ms;
+
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+span[ripple] {
+	position: absolute;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0);
+	opacity: 0.6;
+
+	animation: ripple 700ms;
+	-webkit-animation: ripple 700ms;
+
+	transform: scale(0);
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
+}
+
+button[ripple][ripple-dark] span[ripple] {
+	background-color: rgb(255, 255, 255);
+}
+
+@keyframes ripple {
+	to {
+		transform: scale(2);
+		opacity: 0;
+		-webkit-transform: scale(2);
+		-moz-transform: scale(2);
+		-ms-transform: scale(2);
+		-o-transform: scale(2);
+	}
+}
