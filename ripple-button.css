@@ -22,7 +22,7 @@ button[ripple] {
 span[ripple] {
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0);
+  background-color: #fff;
   opacity: 0.6;
 
   animation: ripple 700ms;
@@ -36,7 +36,7 @@ span[ripple] {
 }
 
 button[ripple][ripple-dark] span[ripple] {
-  background-color: rgb(255, 255, 255);
+  background-color: #000;
 }
 
 @keyframes ripple {
